@@ -12,9 +12,8 @@ import (
 
 // Loading .env file here because this init function will be executed first
 func init() {
-	if err := godotenv.Load(); err != nil {
-		fmt.Print(err)
-	}
+	_ = godotenv.Load()
+
 }
 
 func InitDB() *gorm.DB {
